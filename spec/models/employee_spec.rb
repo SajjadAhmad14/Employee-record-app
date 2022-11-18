@@ -1,10 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe Employee, type: :model do
-  # before do
-  #   employee2 = Employee.create(first_name: "", last_name: "last test", nick_name: "test",
-  #     email: "a@a.com", employer: "test employer", phone: 0, date_started: "2020-20-20", date_employment_ended: "2022-02-05")  
-  # end
+  
   it "Employee should not be created if first name is blank" do
     employee = Employee.create(first_name: "", last_name: "last test", nick_name: "test",
       email: "a@a.com", employer: "test employer", phone: "099212345", date_started: "2020-12-20", date_employment_ended: "2022-02-05")  
