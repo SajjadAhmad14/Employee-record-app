@@ -13,3 +13,25 @@
  *= require_tree .
  *= require_self
  */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container .personal {
+    margin-left: 5px;
+}
+
+.personal-data-container h1{
+  text-align: center;
+}
+
+.btn-center {
+  display: flex;
+  justify-content: center;
+}
+
+#email {
+  margin-left: 10px;
+}

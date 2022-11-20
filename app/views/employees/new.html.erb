@@ -1,3 +1,13 @@
-<h1>
-New employee page
-</h1>
+<div class = "personal-data-container"><h1>Personal Data</h1>
+<%= simple_form_for @employee do |f| %>
+  <%= f.input :first_name %>
+  <%= f.input :last_name %>
+  <%= f.input :nick_name %>
+  <%= f.input :email, id: "email"%>
+  <%= f.input :phone %>
+  <div class = "btn-center">
+  <%= f.button :button, 'Save', type: :submit %>
+  <%= f.button :button, 'Cancel', type: :reset %>
+  </div>
+<% end %>
+</div>
