@@ -1,0 +1,13 @@
+<div class = "personal-data-container"><h1>Employment Data</h1>
+  <%= turbo_frame_tag "second_turbo_frame" do %>
+    <%= simple_form_for @employment do |f| %>
+      <%= f.input :employer %>
+      <%= f.input :date_started %>
+      <%= f.input :date_employment_ended %>
+      <div class = "btn-center">
+        <%= f.button :button, 'Save', type: :submit %>
+        <%= f.button :button, 'Cancel', type: :reset %>
+      </div>
+    <% end %>
+  <% end %>
+</div>
