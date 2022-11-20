@@ -89,3 +89,15 @@ label {
   left: 20%;
   margin-bottom: 30px;
 }
+
+.employer {
+  margin-left: 30px;
+}
+
+.date-start {
+  margin-left: 5px;
+}
+
+.date-end {
+  margin-left: 12px;
+}

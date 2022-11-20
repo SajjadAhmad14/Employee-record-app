@@ -1,6 +1,6 @@
   <%= turbo_frame_tag "first_turbo_frame" do %>
     <div class = "personal-data-container"><h1>Personal Data</h1>
-      <%= simple_form_for html: {novalidate:true} @employee do |f| %>
+      <%= simple_form_for @employee do |f| %>
           <% if @employee.errors.any? %>
             <div class="error-message">
               <%= @employee.errors.full_messages.to_sentence.capitalize %>
@@ -12,8 +12,8 @@
         <%= f.input :email, placeholder: "Email", input_html: { class: 'email margin-bottom' }, required: true %>
         <%= f.input :phone, placeholder: "Phone", input_html: { class: 'phone margin-bottom' }, required: true, pattern: "[0-9\-]+" %>
         <div class = "btn-center">
-          <%= f.button :button, 'Save', type: :submit, :class => 'save-btn', disabled:true, data: { disable_with: false } %>
-          <%= f.button :button, 'Cancel', type: :reset, :class => 'cancel-btn' %>
+          <%= f.button :button, 'Save', type: :submit, :class => 'save-btn' %>
+          <%= link_to "<button class='cancel-btn'>Cancel</button>".html_safe, root_path %>
         </div>
       <% end %>
     </div>

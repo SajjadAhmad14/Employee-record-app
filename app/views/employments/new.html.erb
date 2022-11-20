@@ -1,12 +1,12 @@
 <div class = "personal-data-container"><h1>Employment Data</h1>
   <%= turbo_frame_tag "second_turbo_frame" do %>
     <%= simple_form_for @employment do |f| %>
-      <%= f.input :employer %>
-      <%= f.input :date_started %>
-      <%= f.input :date_employment_ended %>
+      <%= f.input :employer, input_html: { class: 'employer margin-bottom' }, required: true %>
+      <%= f.input :date_started, input_html: { class: 'date-start margin-bottom' }, required: true %>
+      <%= f.input :date_employment_ended, label: 'date ended', input_html: { class: 'date-end margin-bottom' }, required: true %>
       <div class = "btn-center">
-        <%= f.button :button, 'Save', type: :submit %>
-        <%= f.button :button, 'Cancel', type: :reset %>
+        <%= f.button :button, 'Save', type: :submit, :class => 'save-btn' %>
+        <%= link_to "<button class='cancel-btn'>Cancel</button>".html_safe, root_path %>
       </div>
     <% end %>
   <% end %>

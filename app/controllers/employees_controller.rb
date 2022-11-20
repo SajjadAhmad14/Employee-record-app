@@ -6,13 +6,10 @@ class EmployeesController < ApplicationController
   def create
     @employee = Employee.new(employee_params)
     if @employee.save
-      redirect_to controller: :home, action: :home_page, notice: "Quote was successfully created."
+      redirect_to controller: :employments, action: :new
     else
       render :new
     end
-  end
-    
-  def index
   end
     
   private
