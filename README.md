@@ -1,24 +1,58 @@
-# README
+# Employee Record App
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+> This is an app to keep record of employees built using Rails7, Turbo, MYSQL.
 
-Things you may want to cover:
 
-* Ruby version
+## Built With
 
-* System dependencies
+- Rails7, Turbo, MYSQL, Tailwind, 
+- Git, GitHub, Vscode
 
-* Configuration
+## Live Demo
 
-* Database creation
+[Coming Soon](https://www.sajahmad.com/)
 
-* Database initialization
 
-* How to run the test suite
+## Getting Started
 
-* Services (job queues, cache servers, search engines, etc.)
+**This is an example of how you may give instructions on setting up your project locally.**
+**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
 
-* Deployment instructions
 
-* ...
+To get a local copy up and running follow these simple example steps.
+- Run `bundle install`
+- Run `rails db:create` and `rails db:migrate`
+- Run `yarn install` or `npm install`
+- Run `rspec` for tests 
+
+### Prerequisites
+
+- Ruby
+- Rails7
+- MYSQL
+
+## Authors
+
+👤 **Sajjad Ahmad**
+
+- GitHub: [@githubhandle](https://github.com/SajjadAhmad14)
+- Twitter: [@twitterhandle](https://twitter.com/Sajjad_Ahmad14)
+- LinkedIn: [LinkedIn](https://linkedin.com/in/sajjadahmad14)
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](https://github.com/SajjadAhmad14/My-Portfolio/issues).
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+## Acknowledgments
+
+- Microverse for Figma design
+
+## 📝 License
+
+This project is [MIT](./MIT.md) licensed.
