@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_11_18_113538) do
+ActiveRecord::Schema[7.0].define(version: 2022_11_20_111258) do
   create_table "employees", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -18,10 +18,15 @@ ActiveRecord::Schema[7.0].define(version: 2022_11_18_113538) do
     t.string "last_name"
     t.string "nick_name"
     t.string "email"
-    t.string "employer"
     t.string "phone"
+  end
+
+  create_table "employments", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+    t.string "employer"
     t.date "date_started"
     t.date "date_employment_ended"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end
