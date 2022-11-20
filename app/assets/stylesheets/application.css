@@ -1,26 +1,21 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 .container {
   display: flex;
   justify-content: center;
   align-items: center;
+  font-family: 'Roboto', sans-serif;
 }
 
 .container .personal {
-    margin-right: 10px;
+    position: absolute;
+    top: 10%;
+    left: 40%;
+}
+
+.container .employment {
+  position: absolute;
+  top: 10%;
 }
 
 .personal-data-container h1{
@@ -34,4 +29,47 @@
 
 #email {
   margin-left: 10px;
+}
+
+.first_name {
+  color: red;
+  margin-left: 10px;
+}
+
+.last_name {
+  margin-left: 11px;
+}
+
+.nick_name {
+  margin-left: 10px;
+}
+
+.email {
+  margin-left: 16.5px;
+}
+
+.phone {
+  margin-left: 41.5px;
+}
+
+.margin-bottom {
+  margin-bottom: 10px;
+  border: 2px solid blue;
+  border-radius: 5px;
+}
+
+.save-btn {
+  margin-left: 90px;
+  margin-right: 10px;
+  background-color: #add8e6;
+  padding: 5px 10px 5px 10px;
+}
+
+.cancel-btn {
+  background-color: #add8e6;
+  padding: 5px 10px 5px 10px;
+}
+
+label {
+  font-size: 20px;
 }
