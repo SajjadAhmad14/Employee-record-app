@@ -4,6 +4,7 @@ class EmploymentsController < ApplicationController
   end
 
   def create
+    p employment_params
     @employment = Employment.new(employment_params)
     if @employment.save
       redirect_to controller: :home, action: :home_page, notice: "Employment is created successfully."

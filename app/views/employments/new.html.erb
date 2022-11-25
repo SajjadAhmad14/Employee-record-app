@@ -1,9 +1,11 @@
   <%= turbo_frame_tag "second_turbo_frame" do %>
-    <div class = "personal-data-container"><h1>Employment Data</h1>
+    <div class = "personal-data-container" data-controller = "employment" data-action = "keyup->employment#validateDate" tabindex="0"><h1>Employment Data</h1>
       <%= simple_form_for @employment do |f| %>
         <%= f.input :employer, input_html: { class: 'employer margin-bottom' }, required: true %>
-        <%= f.input :date_started, input_html: { class: 'date-start margin-bottom' }, required: true %>
-        <%= f.input :date_employment_ended, label: 'date ended', input_html: { class: 'date-end margin-bottom' }, required: true %>
+        <%= f.input :date_started, as: :string, label: 'Date Started', order: [:day, :month, :year], input_html: { class: 'date-start margin-bottom', 'data-target' => 'employment.content' }, required: false %>
+        <%= f.input :date_started, as: :date, label: false, order: [:day, :month, :year], input_html: { class: 'date-start margin-bottom' }, required: true %>
+        <%= f.input :date_employment_ended, as: :string, label: 'Date Ended', order: [:day, :month, :year], input_html: { class: 'date-start margin-bottom', 'data-target' => 'employment.content' }, required: false %>
+        <%= f.input :date_employment_ended, as: :date, label: false, order: [:day, :month, :year], input_html: { class: 'date-end margin-bottom' }, required: true %>
         <div class = "btn-center">
           <%= f.button :button, 'Save', type: :submit, :class => 'save-btn' %>
           <%= link_to "<button class='cancel-btn'>Cancel</button>".html_safe, root_path %>
@@ -11,3 +13,6 @@
       <% end %>
     </div>
   <% end %>
+
+
+  
