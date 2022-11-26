@@ -97,6 +97,14 @@ label {
   margin-left: 5px;
 }
 
+.date-start-widget {
+  margin-left: 13px;
+}
+
+.date-end-widget {
+  margin-left: 14px;
+}
+
 .date-end {
-  margin-left: 12px;
+  margin-left: 16px;
 }
