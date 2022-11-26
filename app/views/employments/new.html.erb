@@ -6,13 +6,13 @@
             <%= @employment.errors.full_messages.to_sentence.capitalize %>
           </div>
         <% end %>
-        <%= f.input :employer, input_html: { class: 'employer margin-bottom' }, required: true %>
+        <%= f.input :employer, input_html: { class: 'employer margin-bottom required-field-emp', 'data-action' => "keyup->employment#enableSaveBtn" }, required: true %>
         <%= f.input :date_started, as: :string, label: 'Date Started', order: [:day, :month, :year], input_html: { class: 'date-start margin-bottom', 'data-action' => "keyup->employment#validateDate", 'data-target' => 'employment.content' }, required: false %>
         <%= f.input :date_started, as: :date, label: false, order: [:day, :month, :year], input_html: { class: 'date-start-widget margin-bottom' }, required: true %>
         <%= f.input :date_employment_ended, as: :string, label: 'Date Ended', order: [:day, :month, :year], input_html: { class: 'date-end margin-bottom', 'data-action' => "keyup->employment#validateDate", 'data-target' => 'employment.content' }, required: false %>
         <%= f.input :date_employment_ended, as: :date, label: false, order: [:day, :month, :year], input_html: { class: 'date-end-widget margin-bottom' }, required: true %>
         <div class = "btn-center">
-          <%= f.button :button, 'Save', type: :submit, :class => 'save-btn' %>
+          <%= f.button :button, 'Save', disabled: true, type: :submit, :class => 'save-btn-employment' %>
           <%= link_to "<button class='cancel-btn'>Cancel</button>".html_safe, root_path %>
         </div>
       <% end %>

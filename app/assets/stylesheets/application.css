@@ -60,7 +60,7 @@
   border-radius: 5px;
 }
 
-.save-btn {
+.save-btn-personal,  .save-btn-employment{
   margin-left: 90px;
   margin-right: 10px;
   background-color: #add8e6;

@@ -6,13 +6,13 @@
               <%= @employee.errors.full_messages.to_sentence.capitalize %>
             </div>
           <% end %>
-        <%= f.input :first_name, placeholder: "First name", input_html: { class: 'first_name margin-bottom' }, required: true %>
-        <%= f.input :last_name, placeholder: "Last name", input_html: { class: 'last_name margin-bottom' }, required: true %>
+        <%= f.input :first_name, placeholder: "First name", input_html: { class: 'first_name margin-bottom required-field', 'data-action' => "keyup->personal#enableSaveBtn" }, required: true %>
+        <%= f.input :last_name, placeholder: "Last name", input_html: { class: 'last_name margin-bottom required-field', 'data-action' => "keyup->personal#enableSaveBtn" }, required: true %>
         <%= f.input :nick_name, placeholder: "Nick name", input_html: { class: 'nick_name margin-bottom' } %>
-        <%= f.input :email, placeholder: "Email", input_html: { class: 'email margin-bottom' }, required: true %>
-        <%= f.input :phone, placeholder: "Phone", input_html: { class: 'phone margin-bottom', 'data-action' => "keyup->personal#validatePhone", 'data-target' => 'personal.content' }, required: true %>
+        <%= f.input :email, placeholder: "Email", input_html: { class: 'email margin-bottom required-field', 'data-action' => "keyup->personal#enableSaveBtn" }, required: true %>
+        <%= f.input :phone, placeholder: "Phone", input_html: { class: 'phone margin-bottom required-field', 'data-action' => "keyup->personal#validatePhone", 'data-target' => 'personal.content', 'data-action' => "keyup->personal#enableSaveBtn" }, required: true %>
         <div class = "btn-center">
-          <%= f.button :button, 'Save', type: :submit, :class => 'save-btn' %>
+          <%= f.button :button, 'Save', disabled: true, type: :submit, :class => 'save-btn-personal' %>
           <%= link_to "<button class='cancel-btn'>Cancel</button>".html_safe, root_path %>
         </div>
       <% end %>
