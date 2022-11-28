@@ -51,8 +51,6 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- Microverse for Figma design
-
 ## 📝 License
 
 This project is [MIT](./MIT.md) licensed.
